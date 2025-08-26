@@ -104,8 +104,10 @@ const Task: FC<IProps> = ({task_id, onDelete, categories, activeTask}) => {
 
     return (
         <div
-            className="w-full h-[45vh] p-[1.5vw] rounded-md bg-accent/50 border-primary flex flex-col items-end justify-between"
+            className="w-full h-[47vh] p-[1.5vw] rounded-md bg-accent/50 border-primary flex flex-col items-end justify-between"
         >
+            <button className="w-[2.5vw]" onClick={()=> setTask(null)}><img
+                src="/icons/cancel.png" alt="close"/></button>
             <div className="w-full flex flex-col gap-[2vh]">
                 <h1 className="text-4xl">Task:</h1>
                     <p className="text-lg">{task.task}</p>
