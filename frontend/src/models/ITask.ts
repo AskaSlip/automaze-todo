@@ -1,13 +1,15 @@
 import {StatusEnum} from "@/enums/status.enum";
 
 export interface ITask {
-    id: string;
+    id?: string;
     task: string
-    status: StatusEnum;
+    status?: StatusEnum;
     priority?: number;
-    dueDate?: Date;
+    dueDate?: string;
 
     category_id?: string;
 }
 
-export interface ITaskUpdate extends Pick<ITask, "priority" | "task"> {}
+export interface ITaskUpdate{
+    priority?: number;
+}

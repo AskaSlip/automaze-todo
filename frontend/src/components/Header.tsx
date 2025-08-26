@@ -4,8 +4,8 @@ import {useTheme} from "next-themes";
 const Header = () => {
     const {theme, setTheme} = useTheme();
     return (
-        <header className="w-full h-[10vh] flex items-center justify-between p-[1vw]  border-2 border-violet-950">
-            <h1 className="text-4xl">Your TO DO helper</h1>
+        <header className="w-full h-[10vh] flex items-center justify-between p-[1vw] sticky top-0 z-50 bg-primary">
+            <h1 className="text-5xl">TO DO it!</h1>
             <button
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 className="w-[40px]"
